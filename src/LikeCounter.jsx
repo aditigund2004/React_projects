@@ -1,51 +1,44 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
+
+// hooks means utility that are provided by react out of the box and you just have to use these features
 
 const LikeCounter = () => {
-
-    const [scount, setscount] = useState(0);
-    // const [dcount, setdcount] = useState(0);
-    // const
-
-    const handleclick = () =>{
-
-        setscount(scount + 1)
-        // console.log("Count like :",scount)
-
-    }
-
-    const handlediclick = () => {
-        setsount(scount + 1)
-        // console.log("dislike ", dcount)
-    }
-
-    const handlereset = () => {
-
-    }
+  const [scount, setscount] = useState(0);
 
   return (
     <div>
-        <center>
-       <p>Hello.. From Like Counter component ❤️</p>
+      <center>
+        <p>Hello.. From Like Counter component ❤️</p>
 
-       <p>count like : {scount}👍</p>
+        <p>current like : {scount}👍</p>
 
-       <button onClick={handleclick}>Like</button>
+        <button
+          onClick={() => {
+            console.log("like clicked");
+            setscount(scount + 1);
+          }}
+        >
+          Like
+        </button>
+        <br></br>
+        <br></br>
 
-       <br></br>
-       <br></br>
+        <button
+          onClick={() => {
+            console.log("Dislike clicked");
+            setscount(scount - 1);
+          }}
+        >
+          Dislike
+        </button>
 
-       <p>count dislike : {scount}👎</p>
+        <br></br>
+        <br></br>
 
-
-       <button onClick={handlediclick}>Dislike</button>
-
-       <button onClick={handlereset}> Reset all likes</button>
-       </center>
-
-
-      
+        <button onClick={() => { setscount(0)}}> Reset all likes</button>
+      </center>
     </div>
-  )
-}
+  );
+};
 
-export default LikeCounter
+export default LikeCounter;

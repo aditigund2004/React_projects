@@ -1,6 +1,11 @@
 import "./App.css";
-import CricketScoreBoard from "./CricketScoreBoard";
 import LikeCounter from "./LikeCounter";
+
+// each component can has state with it
+
+// state has -> state variable and state function
+//  const [count -> variable, setcount -> function] = ueState(0);
+// initial state of count variable is 0 
 
 function App() {
   return (
@@ -8,11 +13,11 @@ function App() {
       <center>
         <h1>Hello!!!!!!! Task One</h1>
 
-        <h1>Like Counter and cricket score counter</h1>
+        <h1>Like Counter</h1>
 
       </center>
       <LikeCounter/>
-      <CricketScoreBoard/>
+      
     </>
   );
 }
